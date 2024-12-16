@@ -1,0 +1,5 @@
+export const COUPON_CODES = {
+  BFRIDAY: "BFRIDAY",
+  XMAS2020: "XMAS2020",
+  NY2015: "NY2015"
+}
