@@ -10,11 +10,6 @@ export default async function Home() {
   const products = await getAllProducts()
   const categories = await getAllCategories()
 
-  console.log(
-    crypto.randomUUID().slice(0, 5) +
-    `>>>> Rendered the homepage cache with ${products.length} products and ${categories.length} categories`
-  )
-
   return (
     <div>
       <BlackFridayBanner />

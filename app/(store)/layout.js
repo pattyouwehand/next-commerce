@@ -1,10 +1,17 @@
-import Header from "@/components/Header"
 import "../globals.css"
+import Header from "@/components/Header"
+import DisableDraftMode from "@/components/DisableDraftMode"
 import { ClerkProvider } from "@clerk/nextjs"
 import { SanityLive } from "@/sanity/lib/live"
 import { VisualEditing } from "next-sanity"
 import { draftMode } from "next/headers"
-import DisableDraftMode from "@/components/DisableDraftMode"
+import Script from "next/script"
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -15,14 +22,51 @@ export default async function RootLayout({ children }) {
   return (
     <ClerkProvider dynamic>
       <html lang="en">
+        <head>
+          <Script
+            id="gtm-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id=GTM-WN66CFJD';f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WN66CFJD');
+              `,
+            }}
+          />
+          <Script
+            id="dataLayer-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: "pageview",
+                  page: window.location.pathname,
+                  environment: "production" // of "development"
+                });
+              `,
+            }}
+          />
+        </head>
         <body>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-WN66CFJD"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
           {(await draftMode()).isEnabled && (
             <>
               <DisableDraftMode />
               <VisualEditing />
             </>
           )}
-          <main>
+          <main className={`${inter.variable} font-sans`}>
             <Header/>
             {children}
           </main>

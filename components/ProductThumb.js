@@ -29,7 +29,7 @@ function ProductThumb({ product }) {
           </div>
         }
       </div>
-      <div className="P-4">
+      <div className="p-4">
         <h2 className="text-lg font-semibold text-gray-800 truncate">
           {product.name}
         </h2>
