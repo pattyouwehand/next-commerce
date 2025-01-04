@@ -17,7 +17,7 @@ function ProductThumb({ product }) {
           <Image
             className="object-contain transition-transform duration-300 group-hover:scale-105"
             src={imageUrl(product.image).url()}
-            alt={product.name || "Product image"}
+            alt={product.name || "Product afbeelding"}
             fill
             sizes="{max-width: 768px} 100vw, {max-width: 1200px} 50vw, 33vw"
           />
@@ -25,7 +25,7 @@ function ProductThumb({ product }) {
         {
           isOutOfStock &&
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <span className="text-white font-bold text-lg">Out of stock</span>
+            <span className="text-white font-bold text-lg">Niet op voorraad</span>
           </div>
         }
       </div>
@@ -44,7 +44,7 @@ function ProductThumb({ product }) {
           }
         </p>
         <p className="mt-2 text-lg font-bold text-gray-900">
-          ${product.price?.toFixed(2)}
+          €{product.price?.toFixed(2)}
         </p>
       </div>
     </Link>

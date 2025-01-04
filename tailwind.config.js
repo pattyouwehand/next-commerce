@@ -8,13 +8,12 @@ module.exports = {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+        inter: ['var(--font-inter)'],
+				lora: ['var(--font-lora)'],
+        vibes: ['var(--font-great-vibes)']
+      },
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
   			red: {
 					DEFAULT: '#f52c2c',
   				dark: '#8B1A27'
@@ -41,31 +40,12 @@ module.exports = {
   			},
   			blue: {
   				dark: '#2C3E50',
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
   			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
-			fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-roboto-mono)'],
-      },
+  		}
   	}
   },
   plugins: [
 		require("tailwindcss-animate"),
-		require('@tailwindcss/typography')
-	],
-};
+		require("@tailwindcss/typography")
+	]
+}

@@ -32,7 +32,7 @@ function AddToBasketButton({ product, disabled }) {
             : "bg-gray-200 hover:bg-gray-300"
         }`}
       >
-        <span className={`text-xl font-bold ${itemCount === 0 ? "text-gray-400" : "text-gray-600"}`}> - </span>
+        <span className={`text-xl font-bold mb-1 ${itemCount === 0 ? "text-gray-400" : "text-gray-600"}`}> - </span>
       </button>
       <span className="w-8 text-center font-semibold">{itemCount}</span>
       <button
@@ -44,7 +44,7 @@ function AddToBasketButton({ product, disabled }) {
             : "bg-blue-500 hover:bg-blue-600"
         }`}
       >
-        <span className="text-xl font-bold"> + </span>
+        <span className="text-xl font-bold mb-1"> + </span>
       </button>
     </div>
   )

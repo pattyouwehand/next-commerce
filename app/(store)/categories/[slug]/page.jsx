@@ -9,17 +9,15 @@ async function CategoryPage({ params }) {
   const categories = await getAllCategories()
 
   return (
-    <div className="flex flex-col items-center justify-top min-h-screen bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded-lg shadow-mdw-full max-w-4xl">
-        <h1>
-          {slug
-            .split("_")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")
-          }{" "} Collection
-        </h1>
-        <ProductsView products={products} categories={categories} />
-      </div>
+    <div className="flex flex-col items-center justify-center pt-4">
+      <h1>
+        {slug
+          .split("_")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ")
+        }{" "} Collectie
+      </h1>
+      <ProductsView products={products} categories={categories} />
     </div>
   )
 }

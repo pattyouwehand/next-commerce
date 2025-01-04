@@ -26,7 +26,7 @@ export function CategorySelectorComponent({ categories }) {
           {
             value
             ? categories.find((categorie) => categorie._id === value)?.title
-            : "Filter by category"
+            : "Filter op categorie"
           }
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" />
         </Button>
@@ -35,7 +35,7 @@ export function CategorySelectorComponent({ categories }) {
       <PopoverContent className="w-full p-0">
         <Command>
           <CommandInput
-            placeholder="Search category"
+            placeholder="Zoek categorie"
             className="h-9"
             onKeyDown={(e) =>{
               if (e.key === "Enter") {
@@ -50,7 +50,7 @@ export function CategorySelectorComponent({ categories }) {
             }}
           />
           <CommandList>
-            <CommandEmpty>No category found.</CommandEmpty>
+            <CommandEmpty>Geen categorie gevonden.</CommandEmpty>
             <CommandGroup>
               {
                 categories.map((category) =>(
