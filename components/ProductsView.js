@@ -3,7 +3,7 @@ import { CategorySelectorComponent } from "./ui/category-selector"
 
 const ProductsView = ({ products, categories}) => {
   return (
-    <div className="section-style flex flex-col">
+    <div className="section-style flex flex-col pt-2">
       <div className="w-full sm:w-[200px]">
         <CategorySelectorComponent categories={categories} />
       </div>

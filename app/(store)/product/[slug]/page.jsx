@@ -19,7 +19,7 @@ async function ProductPage({ params }) {
   return (
     <div className="section-style py-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className={`relative aspect-square overflow-hidden rounded-lg shadow-lg ${isOutOfStock ? "opacity-50" : ""}`}>
+        <div className={`relative aspect-square overflow-hidden rounded-lg bg-white shadow-lg ${isOutOfStock ? "opacity-50" : ""}`}>
           {
             product.image &&
             <Image
@@ -50,7 +50,7 @@ async function ProductPage({ params }) {
             </div>
           </div>
           <div className="flex items-center justify-start mt-6 gap-4">
-            <Button className="pointer-events-none">Voeg toe aan mijn winkelwagen</Button>
+            <div className="pointer-events-none">Voeg toe aan mijn winkelwagen</div>
             <AddToBasketButton product={product} disabled={isOutOfStock} />
           </div>
         </div>

@@ -3,14 +3,14 @@ import { getAllCategories } from "@/sanity/lib/products/getAllCategories"
 import getProductsByCategory from "@/sanity/lib/products/getProductsByCategory"
 
 async function CategoryPage({ params }) {
-  const { slug } = params
+  const { slug } = await params
 
   const products = await getProductsByCategory(slug)
   const categories = await getAllCategories()
 
   return (
     <div className="flex flex-col items-center justify-center pt-4">
-      <h1>
+      <h1 className="section-style">
         {slug
           .split("_")
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))

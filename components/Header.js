@@ -25,14 +25,14 @@ function Header() {
   return (
     <header className="bg-white py-2">
       <div className="section-style flex flex-wrap justify-between items-center">
-        <div className="flex w-full flex-wrap justify-between items-center">
+        <div className="flex w-full flex-wrap justify-between items-center md:gap-4 xl:gap-0">
           <div className="flex flex-col justify-center items-center">
             <Link
               href="/"
               className="text-4xl font-bold hover:opacity-50 cursor-pointer sm:mx-0 mx-auto"
             >
-              <span className="text-blue-dark">Fortify</span>
-              <span className="text-red-dark">.ICU</span>
+              <span className="text-blue-dark">Your</span>
+              <span className="text-red-dark">Webshop</span>
             </Link>
           </div>
 
@@ -59,7 +59,7 @@ function Header() {
                 {itemCount}
               </span>
 
-              <span>Winkelmand</span>
+              <span className="hidden md:block">Winkelmand</span>
             </Link>
 
             {/* User area*/}
@@ -70,7 +70,7 @@ function Header() {
                   className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   <PackageIcon className="w-6 h-6" />
-                  <span>Bestellingen</span>
+                  <span className="hidden md:block">Bestellingen</span>
                 </Link>
               )}
 
@@ -87,14 +87,17 @@ function Header() {
                 <SignInButton mode="modal" />
               )}
 
-              {user?.passkeys.length === 0 && (
-                <button
-                  onClick={createClerkPasskey}
-                  className="bg-white hover:bg-blue-700 hover:text-white animate-pulse text-blue-500 font-bold py-2 px-4 rounded border-blue-300 border"
-                >
-                  Passkey aanmaken
-                </button>
-              )}
+              <div className="hidden md:block">
+                {
+                  user?.passkeys.length === 0 &&
+                  <button
+                    onClick={createClerkPasskey}
+                    className="bg-white hover:bg-blue-700 hover:text-white animate-pulse text-blue-500 font-bold py-2 px-4 rounded border-blue-300 border"
+                  >
+                    Passkey aanmaken
+                  </button>
+                }
+              </div>
             </ClerkLoaded>
           </div>
         </div>

@@ -22,7 +22,7 @@ function AddToBasketButton({ product, disabled }) {
   }
 
   return (
-    <div className="flex items-center justify-center space-x-2">
+    <div className="flex items-center justify-center md:space-x-2">
       <button
         onClick={() => removeItem(product._id)}
         disabled={itemCount === 0 || disabled}

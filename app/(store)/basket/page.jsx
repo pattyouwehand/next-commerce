@@ -84,7 +84,7 @@ function BasketPage() {
             groupedItems?.map((item) => (
               <div
                 key={item.product._id}
-                className="mb-4 p-4 border rounded flex items-center justify-between bg-white"
+                className="mb-4 py-4 md:px-4 border rounded flex items-center justify-between bg-white"
               >
                 <div
                   className="flex items-center cursor-pointer flex-1 min-w-0"
@@ -112,7 +112,7 @@ function BasketPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center ml-4 flex-shrink-0">
+                <div className="flex items-center ml-2 mr-1 md:ml-4 md:mr-0 flex-shrink-0">
                   <AddToBasketButton product={item.product} />
                 </div>
               </div>
@@ -146,7 +146,7 @@ function BasketPage() {
               </button>
             ) : (
               <SignInButton mode="modal">
-                <button className="mt-4 w-full bg-blue-500 text-white px-4 rounded hover:bg-blue-600">
+                <button className="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                   Aanmelden om af te rekenen
                 </button>
               </SignInButton>
