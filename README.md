@@ -5,6 +5,9 @@ The app integrates the Sanity.io CMS for dynamic content management, Stripe for 
 
 This project demonstrates the potential of cutting-edge tools to create a robust, user-friendly eCommerce solution from scratch.
 
+<br />
+
+
 ## Technologies Used
 * Next.js 15: Server-side rendering, API handling, and dynamic routing.
 * Sanity.io CMS: Embedded content management system for dynamic and scalable content updates.
@@ -13,6 +16,14 @@ This project demonstrates the potential of cutting-edge tools to create a robust
 * Zustand: Lightweight state management for a performant user experience.
 * Tailwind CSS: Utility-first CSS framework for responsive and visually appealing design.
 * JavaScript (ES6+): Core scripting for dynamic features and functionality.
+
+<br />
+
+## Preview
+
+Explore the live version of the app here: [Next Commerce](https://next-commerce-orcin.vercel.app/)
+
+<br />
 
 ![Screenshot_125](https://github.com/user-attachments/assets/5b9a725d-4b22-46e9-a7b3-955f0083e5d9)
 
@@ -26,8 +37,11 @@ This project demonstrates the potential of cutting-edge tools to create a robust
 
 ![Screenshot_129](https://github.com/user-attachments/assets/ca8813d4-e68a-44df-9417-cefca26df821)
 
+<br />
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+<br />
 
 ## Available Scripts
 
