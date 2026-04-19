@@ -1,9 +1,7 @@
 # Next-Commerce
-Next-Commerce is a fully functional eCommerce application designed to showcase modern web development practices and scalable architecture. Built with Next.js 15, it provides a seamless user experience with features like user authentication, product browsing, order handling, and a streamlined checkout process.
+A modern e-commerce application built with Next.js, featuring authentication, product browsing, and a complete checkout flow.
 
-The app integrates the Sanity.io CMS for dynamic content management, Stripe for secure payment processing, and Clerk for authentication. State management is handled with Zustand, ensuring performance and simplicity, while Tailwind CSS is used for responsive and elegant UI design.
-
-This project demonstrates the potential of cutting-edge tools to create a robust, user-friendly eCommerce solution from scratch.
+This project focuses on building a scalable and user-friendly frontend, integrated with external services for content management, authentication, and payments.
 
 <br />
 
